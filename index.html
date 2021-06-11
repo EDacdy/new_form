@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>新青年修炼手册</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+			integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script type="text/javascript"
+			src="https://cdn.jsdelivr.net/gh/space10-community/conversational-form@1.0.1/dist/conversational-form.min.js"
+			crossorigin></script>
+		<link rel="stylesheet" href="style.css">
+		<style>
+			#conversational-form{
+				/* background-color: transparent; */
+				background: url(c046abafbf5d4e17b28abbad9601eb28.png) 0 0 no-repeat,url(63d6036d8b95a7b7e9275bde4b4.png) 0 bottom no-repeat;
+				background-size: cover;
+			}
+			cf-input{
+				background: transparent!important;
+			}
+			cf-chat-response text>p{
+				/* background: #fff; */
+				background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%)!important;
+				/* background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%)!important; */
+			}
+			cf-chat-response.user text>p {
+				/* background: linear-gradient(#4facfe, #00f2fe)!important; */
+				background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%)!important;
+				}
+		/* 	:root {
+			  --anim-easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			  --cf-anim-time: 0.75s;
+			  --cf-breakpoint-1: 769px;
+			  --cf-color-green: #1ed97b;
+			  --cf-font-weight-bold: 900;
+			  --cf-color-black: #222222;
+			  --cf-color-black-alpha04: rgba(34, 34, 34, 0.4);
+			  --cf-color-black-alpha02: rgba(34, 34, 34, 0.2);
+			  --cf-color-grey: #ebebeb;
+			  --cf-color-white: white;
+			} */
+		</style>
+	</head>
+	<body style="height: 100vh;width: 100vw;overflow: hidden;position:relative ;">
+		<!-- <div style="position: absolute;top: 0;left: 0;width: 100%;height: 50px;background:url(c046abafbf5d4e17b28abbad9601eb28.png);"></div> -->
+		<!-- <form id="form" cf-form>
+        <input type="text" cf-questions="Your name? This is own html" value="teunkoldeweij" required/>
+        <input type="text" name="gender" list="gender" cf-questions="Your gender? This is own html" required/>
+        <datalist id="gender">
+            <option value="Male">
+            <option value="Female">
+            <option value="Custom">
+        </datalist>
+        <input type="email" cf-questions="Your email? This is own html" required/>
+    </form>    -->
+
+		<form id="form" cf-form class="form">
+			<cf-robot-message
+				cf-questions="理想照耀中国——穿越百年 见证辉煌.&&作为新时代的中国青年，要有敢为人先的锐气，勇于求索的信心，开拓进取的气魄，与时俱进的品格，挑千斤重担，乘风浪前行.&&披荆斩棘，不负勇往，乘风破浪，扬帆远航。穿越百年，让理想照耀中国，让世界的目光齐聚中国。">
+
+				<fieldset cf-questions="您自己的青春规划(理想)状况是？" cf-input-placeholder="请开启青春修炼手册"
+					cf-error="Please enter a valid service">
+					<input cf-label="已有较为明确的规划" type="radio" name="getstarted" value="yes">
+					<input cf-label="尚在构想阶段" type="radio" name="getstarted" value="no">
+				</fieldset>
+				<fieldset cf-questions="真棒！能与我们分享一下您的青春规划（理想)吗？">
+					<input cf-conditional-getstarted="yes" cf-label="可以" type="radio" name="eda-one" value="yes">
+					<input cf-conditional-getstarted="yes" cf-label="我想先看看例子" type="radio" name="eda-one" value="no">
+				</fieldset>
+				<fieldset cf-questions="千里之行,始于足下">
+					<input cf-conditional-getstarted="no" cf-label="开启青春修炼手册" type="radio" name="eda-two" value="yes">
+					<input cf-conditional-getstarted="no" cf-label="邀请青年朋友帮帮忙" type="radio" name="eda-two" value="no">
+				</fieldset>
+
+				<input type="text" cf-questions="输入您的青春规划" value="愿中国青年都摆脱冷气，只是向上走" required
+					cf-conditional-eda-one="yes" />
+				<input type="text" cf-questions="规划角度&理想由来" value="受历史文化纪录片熏陶,自身对中华文化充满着热爱" required
+					cf-conditional-eda-one="yes" />
+				<fieldset cf-questions="你会如何实现青春规划,实现青年价值">
+					<input type="checkbox" name="languages" checked="checked" cf-conditional-eda-one="yes"
+						cf-label="树立中国特色社会主义共同理想" />
+					<input type="checkbox" name="languages" checked="checked" cf-conditional-eda-one="yes"
+						cf-label="践行社会主义核心价值观" />
+					<input type="checkbox" name="languages" checked="checked" cf-conditional-eda-one="yes"
+						cf-label="求知若渴" />
+					<input type="checkbox" name="languages" checked="checked" cf-conditional-eda-one="yes"
+						cf-label="不忘初心、牢记使命" />
+					<input type="checkbox" name="languages" checked="checked" cf-conditional-eda-one="yes"
+						cf-label="学习共产党人精神" />
+					<input type="checkbox" name="languages" checked="checked" cf-conditional-eda-one="yes"
+						cf-label="勤于学习、敏于求知" />
+					<input type="checkbox" name="languages" checked="checked" cf-conditional-eda-one="yes"
+						cf-label="使社会主义核心价值观成为自己的基本遵循" />
+					<input type="checkbox" name="languages" checked="checked" cf-conditional-eda-one="yes"
+						cf-label="更多" />
+				</fieldset>
+				<cf-robot-message cf-questions="感谢你分享青春修炼手册,快去找你的青年朋友一起加入吧!" cf-conditional-eda-one="yes" />
+
+				<!-- 	<input type="text" cf-questions="输入您的青春规划" value="愿中国青年都摆脱冷气，只是向上走" required
+						cf-conditional-getstarted="no" /> -->
+				<!-- <input type="text" cf-questions="规划角度&理想由来1" value="受历史文化纪录片熏陶,自身对中华文化充满着热爱" required
+						cf-conditional-getstarted="no" /> -->
+				<!-- &&&&" -->
+				<cf-robot-message cf-questions="例子一&&理想简述:我的理想是成为一名文物摄影师,能够在光与影中体验到中华文化的魅力"
+					cf-conditional-eda-one="no" />
+				<input type="text"
+					cf-questions="文物摄影师独特在要了解文物背后的故事,通过构图手法让文物“活灵活现”&&文物摄影师也许不是研究某类文物的专家，但是他们往往具备综合的文化素养，懂得文物的文化内涵，将文物讲述给人们去看去体会。"
+					value="青春规划从何而来？" required cf-conditional-eda-one="no" />
+				<cf-robot-message cf-questions="受《我在故宫修文物》等纪录片影响&&自身对中国文化的热爱" cf-conditional-eda-one="no" />
+				<input type="text" cf-questions="爱好摄影和构图" value="如何写好青年人自己的青春修炼手册" required
+					cf-conditional-eda-one="no" />
+				<cf-robot-message cf-questions="学习好理论知识&&列好年度计划&&多欣赏名家作品" cf-conditional-eda-one="no" />
+				<input type="text" cf-questions="对文物和摄影保持热爱,在各地博物馆中获得灵感" value="可以带大家领略一下文物摄影的魅力吗？" required
+					cf-conditional-eda-one="no" />
+				<fieldset cf-questions="能为大家提供文物摄影图片是我的荣幸,图片来源中国国家博物馆" cf-conditional-eda-one="no">
+					<input cf-label="玉琮--良渚文化" type="checkbox" checked="checked" cf-image="./ww1.jpg" name="ww"
+						value="0" cf-conditional-eda-one="no">
+					<input cf-label="玉龙--红山文化" type="checkbox" checked="checked" cf-image="./ww2.jpg" name="ww"
+						value="1" cf-conditional-eda-one="no">
+					<input cf-label="清朝传位玉玺" type="checkbox" checked="checked" cf-image="./ww3.jpg" name="ww" value="2"
+						cf-conditional-eda-one="no">
+				</fieldset>
+				<cf-robot-message cf-questions="就分享这三件啦,快回去写下你的青春修炼手册吧!" cf-conditional-eda-one="no" />
+
+				<!-- <input type="text" cf-questions="可以带大家领略一下文物摄影的魅力吗？" value="理想简述:我的理想是成为一名文物摄影师,能够在光与影中体验到中华文化的魅力" required
+					cf-conditional-eda-one="no" /> -->
+				<!-- 	<input type="text" cf-questions="规划角度&理想由来1" value="受历史文化纪录片熏陶,自身对中华文化充满着热爱" required
+					cf-conditional-eda-one="no" /> -->
+				<!-- 	<fieldset cf-questions="你会如何实现青春规划,实现青年价值">
+					<input type="checkbox" name="aaaaa" checked="checked" cf-conditional-eda-one="no"
+						cf-label="学习好理论知识1" />
+					<input type="checkbox" name="aaaaa" checked="checked" cf-conditional-eda-one="no"
+						cf-label="践行社会主义核心价值观" />
+					<input type="checkbox" name="aaaaa" checked="checked" cf-conditional-eda-one="no" cf-label="求知若渴" />
+					<input type="checkbox" name="aaaaa" checked="checked" cf-conditional-eda-one="no"
+						cf-label="不忘初心、牢记使命" />
+					<input type="checkbox" name="aaaaa" checked="checked" cf-conditional-eda-one="no"
+						cf-label="学习共产党人精神" />
+					<input type="checkbox" name="aaaaa" checked="checked" cf-conditional-eda-one="no"
+						cf-label="勤于学习、敏于求知" />
+					<input type="checkbox" name="aaaaa" checked="checked" cf-conditional-eda-one="no"
+						cf-label="使社会主义核心价值观成为自己的基本遵循" />
+					<input type="checkbox" name="aaaaa" checked="checked" cf-conditional-eda-one="no" cf-label="更多" />
+				</fieldset>
+ -->
+
+
+
+				<cf-robot-message name="ending" cf-conditional-eda-two="yes"
+					cf-questions="习近平总书记关于青年的一些期盼和嘱咐,希望能给青年人一些启发" />
+				<cf-robot-message
+					cf-questions="理想信念：指引人生方向，决定事业成败&&2014年5月4日，习近平在北京大学师生座谈会上的讲话"
+					cf-conditional-eda-two="yes" />
+				<input type="text" cf-questions="1969年1月,不满16岁的习近平踏上西去延安的列车，开始了知青生涯，从那开始，青年习近平一直在基层摸爬滚打，最终找到了自己的人生方向。多年后回忆那段岁月时，他坦言：“这里培养出了我不变的信念：要为人民做实事！”" value="学习下一条" 
+						cf-conditional-eda-two="yes" />
+				<cf-robot-message
+					cf-questions="责任：生逢其时，也重任在肩&&2014年9月9日，习近平同北京师范大学师生代表座谈时的讲话"
+					cf-conditional-eda-two="yes" />
+					<input type="text" cf-questions="近平对青年充满期望。2013年12月，习近平在给华中农业大学“本禹志愿服务队”的回信中写道，“青年一代有理想、有担当，国家就有前途，民族就有希望，实现中华民族伟大复兴就有源源不断的强大力量。”" value="学习下一条"
+							cf-conditional-eda-two="yes" />
+				<cf-robot-message
+					cf-questions="奋斗：青春是用来奋斗的&&2015年7月，习近平致全国青联十二届全委会和全国学联二十六大的贺信"
+					cf-conditional-eda-two="yes" />
+					<input type="text" cf-questions="奋斗，是青春最厚重的底色。开荒、种地、铡草、放养、拉煤、打坝、挑粪……对大多数年轻人来说，这早已是陌生的活计，但对青年习近平而言，这是他的日常劳作。“青春是用来奋斗的”。习近平以自己的青春岁月践行了这句话。" value="学习下一条"
+							cf-conditional-eda-two="yes" />
+				<cf-robot-message
+					cf-questions="学习：像海绵汲水一样汲取知识&&2016年4月26日，习近平在知识分子、劳动模范、青年代表座谈会上的讲话"
+					cf-conditional-eda-two="yes" />
+					<input type="text" cf-questions="“近平从来没有放弃读书和思考”，这是梁家河的乡亲们对这位年轻知青的评价。习近平后来回忆说：“上山放羊，我揣着书，把羊拴到山坡上，就开始看书。锄地到田头，开始休息一会儿时，我就拿出新华字典记一个字的多种含义，一点一滴积累。”习近平总书记始终把读书学习当成一种生活态度、一种工作责任、一种精神追求。" value="学习下一条"
+							cf-conditional-eda-two="yes" />
+							<cf-robot-message
+								cf-questions="品格：育人的根本在于立德&&2017年5月4日，习近平在中国政法大学考察并发表重要讲话；"
+								cf-conditional-eda-two="yes" />
+				<!-- 				<cf-robot-message
+					cf-questions=""
+					cf-conditional-eda-two="yes" /> -->
+				<fieldset
+					cf-questions="青年的人生之路很长，心中有阳光，脚下才有力量。习近平强调，我们的用人标准为什么是德才兼备、以德为先，因为德是首要、是方向。"
+					cf-conditional-eda-two="yes">
+					<input type="checkbox" name="xx" checked="checked" cf-conditional-eda-two="yes" cf-label="理想信念" />
+					<input type="checkbox" name="xx" checked="checked" cf-conditional-eda-two="yes" cf-label="奋斗" />
+					<input type="checkbox" name="xx" checked="checked" cf-conditional-eda-two="yes" cf-label="学习" />
+					<input type="checkbox" name="xx" checked="checked" cf-conditional-eda-two="yes" cf-label="学习" />
+					<input type="checkbox" name="xx" checked="checked" cf-conditional-eda-two="yes" cf-label="品格" />
+					<input type="checkbox" name="xx" checked="checked" cf-conditional-eda-two="yes" cf-label="青年定践行" />
+				</fieldset>
+				<input type="text" cf-questions="青年的心是否澎湃,是否愿意学习榜样,穿越百年见证辉煌" value="我愿意" required
+					cf-conditional-eda-two="yes" />
+				<fieldset
+					cf-questions="漫漫理想征途，百年跋涉脚步&&不同历史时期，涌现出如李大钊、蔡和森、瞿秋白、刘伯坚、方志敏、杨靖宇、叶挺、邓稼先、钱学森、时传祥、雷锋、王进喜、焦裕禄、孔繁森、任长霞、沈浩等一代代优秀共产党人，他们与时代同进、与党性辉映&&他们是党和国家重要历史瞬间的参与者、是中国共产党的精神之魂、是给予他人光明的璀璨星辰，是有理想信念的追梦人，更是引领当代青年人砥砺前行的精神灯塔，他们用自己的理想和信念托起整个中华民族的伟大复兴。&&共和国勋章获得者更是我辈青年学习的榜样"
+					cf-conditional-eda-two="yes">
+					<input cf-label="袁隆平--杂交水稻之父" type="checkbox" checked="checked" cf-image="./rw2.jpg" name="rw"
+						value="0" cf-conditional-eda-two="yes">
+					<input cf-label="钟南山--呼吸病学专家" type="checkbox" checked="checked" cf-image="./rw5.jpg" name="rw"
+						value="1" cf-conditional-eda-two="yes">
+					<input cf-label="屠呦呦--青蒿素研究开发" type="checkbox" checked="checked" cf-image="./rw4.jpg" name="rw"
+						value="2" cf-conditional-eda-two="yes">
+					<input cf-label="黄旭华--中国核潜艇之父" type="checkbox" checked="checked" cf-image="./rw3.jpg" name="rw"
+						value="3" cf-conditional-eda-two="yes">
+					<input cf-label="申纪兰--全国优秀共产党员" type="checkbox" checked="checked" cf-image="./rw1.jpg" name="rw"
+						value="4" cf-conditional-eda-two="yes">
+					<input cf-label="孙家栋--中国航天“大总师”" type="checkbox" checked="checked" cf-image="./rw6.jpg" name="rw"
+						value="6" cf-conditional-eda-two="yes">
+				</fieldset>
+				<!--    <fieldset cf-questions="我的青春修炼手册" cf-conditional-can1="no">
+            <input cf-label="Future Food" type="radio" cf-image="./photo1.jpg" name="imageAnswer" value="0">
+            <input cf-label="SolarVille" type="radio" cf-image="./photo2.jpg" name="imageAnswer" value="1">
+            <input cf-label="Urban Village" type="radio" cf-image="./photo3.jpg" name="imageAnswer" value="2">
+        </fieldset> -->
+				<!--  <fieldset cf-questions="Nice! We've added some new features in V1.0 like smoother animations and some prebuilt themes.">
+            <input cf-label="Dark" type="radio" name="theme" value="conversational-form-dark.min.css" checked="">
+            <input cf-label="Light" type="radio" name="theme" value="conversational-form.min.css">
+            <input cf-label="Green" type="radio" name="theme" value="conversational-form-green.min.css">
+            <input cf-label="Purple" type="radio" name="theme" value="conversational-form-purple.min.css">
+            <input cf-label="Blue" type="radio" name="theme" value="conversational-form-irisblue.min.css">
+            <input cf-label="Red" type="radio" name="theme" value="conversational-form-red.min.css">
+        </fieldset> -->
+				<!-- <fieldset cf-questions="感谢分享您的青春修炼手册,快去找你的青年朋友一起加入吧!"   cf-conditional-can1="yes" >
+            <input type="radio" cf-label="No thanks" name="changeThemeAgain" name="can1" value="yes">
+        </fieldset> -->
+
+		</form>
+
+
+		<script src="script.js"></script>
+	</body>
+</html>

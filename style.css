@@ -1,0 +1,16 @@
+#conversational-form {
+    width: 100vw;
+    height: 100vh;
+    /* border: 5px dotted blue; */
+    /* border-radius: 15px; */
+}
+
+form {
+    /* margin-top: 250px; */
+}
+
+
+input {
+    border: none;
+    width: 0px;
+}
